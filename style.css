@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+
+    /* Menggunakan gambar sebagai background */
+    background-image: url(Gambar WhatsApp 2024-10-29 pukul 14.05.20_155a372e.jpg);
+    background-size: cover; /* Membuat gambar menutupi seluruh latar */
+    background-position: center; /* Menempatkan gambar di tengah */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #ff3b2f;
+}
+
+.hidden {
+    display: none;
+}
+
+#heartContainer {
+    margin-top: 20px;
+    animation: fadein 2s ease-in-out;
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    background: red;
+    margin: 0 auto;
+    transform: rotate(-45deg);
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: red;
+}
+
+.heart::before {
+    top: 0;
+    left: 50px;
+}
+
+.heart::after {
+    top: -50px;
+    left: 0;
+}
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
